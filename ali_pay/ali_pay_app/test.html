@@ -1,0 +1,33 @@
+<form id='alipaysubmit' name='alipaysubmit' action='https://openapi.alipaydev.com/gateway.do?charset=utf-8' method='POST'>
+<input type='hidden' name='biz_content' value=''/>
+<input type='hidden' name='app_id' value=''/>
+<input type='hidden' name='version' value=''/>
+
+<input type='hidden' name='sign_type' value=''/>
+<input type='hidden' name='method' value=''/>
+<input type='hidden' name='timestamp' value=''/>
+<input type='hidden' name='notify_url' value=''/>
+
+<input type='hidden' name='charset' value=''/>
+<input type='hidden' name='sign' value=''/>
+<input type='submit' value='ok' style='display:none;'>
+</form>
+<script>
+	var json ={"app_id":"2016072900113744","biz_content":"{\"body\":\"2\",\"subject\":\"1\",\"out_trade_no\":\"1112545\",\"product_code\":\"FAST_INSTANT_TRADE_PAY\",\"total_amount\":0.1}","charset":"utf-8","method":"alipay.trade.page.pay","notify_url":"http://pay.yaove.com/_callback_1112545-4","sign":"jN6QVRbisWdX5KRcrgd4tSfU+2knNIW7aF5gmbCLJKe1eZz6Xwrv/CcPQyDDb6da0Fnw9ChLK5AWdT+5GgeivhaUhfGr9E6g4LkVYDv8qYl9qzy2XJMVgc+zbKmwTKxCWTMsHTmCNUzJoPG95E3aZ/brakuPVp7tjGXX19SZNag=","sign_type":"RSA","timestamp":"2017-09-05 17:44:39","version":"1.0"}
+
+	
+	
+	for(i in json){
+			document.getElementsByName(i)[0].value = json[i]
+	}
+//TkeukeOHRaO5TGQ1QSo8jD174FVe6cG6%2BRMT8cOSb9G3rVmNzXgpzSSZTX6p0rYVnvxSvd%2BnBKEZZUXO9LSqPo7WL1w1w2iaXAkpXrU9F%2Bf1jljQVGXG4PsshnBNnCGrFhGrBT7%2Fvtsna2lP1MNNg4SFducVbwx6fi6kStUCSjDphmO4G8Xh8i6yWJj5WfN0r%2BogVN4gmxy46k3eKbRW%2Ba2PW6FmDY7%2Fb%2Fu2UlW%2FIUzE5KC6U3C1YujnMA24mOjYCsASeUuBEry1nJexUat8H4QqPNxSzwjrX7e34LUEK3zeT9sHXMOoe%2FIQmtHyyXNfz7kEWwRsehNCpQOsKRxRmA%3D%3D
+document.forms['alipaysubmit'].submit();
+</script>
+
+
+
+
+
+
+
+

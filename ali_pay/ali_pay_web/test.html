@@ -1,0 +1,33 @@
+<form id='alipaysubmit' name='alipaysubmit' action='https://openapi.alipaydev.com/gateway.do?charset=utf-8' method='POST'>
+<input type='hidden' name='biz_content' value=''/>
+<input type='hidden' name='app_id' value=''/>
+<input type='hidden' name='version' value=''/>
+
+<input type='hidden' name='sign_type' value=''/>
+<input type='hidden' name='method' value=''/>
+<input type='hidden' name='timestamp' value=''/>
+<input type='hidden' name='notify_url' value=''/>
+
+<input type='hidden' name='charset' value=''/>
+<input type='hidden' name='sign' value=''/>
+<input type='submit' value='ok' style='display:none;'>
+</form>
+<script>
+	var json ={"app_id":"2016072900113744","biz_content":"{\"body\":\"1\",\"out_trade_no\":\"111011111\",\"product_code\":\"FAST_INSTANT_TRADE_PAY\",\"subject\":\"1\",\"total_amount\":\"1000\"}","charset":"utf-8","method":"alipay.trade.page.pay","notify_url":"http://www.baidu.com","sign":"UgTgsyibYL6VB4WNKRqjkBf/0Ni5GT1rNva8aYamByncTxW4RIv9CXNhyCHfr7VWnjctEaZTf5MmCmo8gh4F0OjD3WwR9p3KhjFw4gHlJOzzGkSfQ98+dxN2BPRyC3DTDF8Qyk71VhqqUkZnRhUq862rsekQ0eyslOHf6c4bBxppS+8xtjiwFdYgRQC88T0A62Q5s8GPtylrebzElV0rjKKfuRPmHly7sbXrEx1JJfGyYTHMZKoY5zmmfIWWMxJtOs5o82HGLUrMQmj3PSHhJdcpcBxnwPY/ujGZK+DtkyxTYGAbNZA82JJo3Wd6e8CrZXDlz4UXf6CG9t9woZ1LhA==","sign_type":"RSA2","timestamp":"2017-09-06 15:07:09","version":"1.0"}
+	
+//MIICXgIBAAKBgQDDZyaiAnizCJaaxZLqCx4Oj3mr1dCpEnrX9LgsKh7PHtZv7NfcA+X/z8uGiGgeC7yscecZ/nyXabf+grDlqVUFOQ5CcIAV2Lk0cxK1s/HiueH+uHc/Yz2t7E7S9NDG+mdfRpoGrwKLlk622vel9XymBvVKCafF+zPkERqFEEwxxwIDAQABAoGBALLaLYBIptWoXMFZajmS53YIWSOxV4YJhis4sYKrIvwNi9Vygbm+T70wI2gGXtZxg8aLky41wzCL8X+he+0aatf8jKupiydM2NuW4nZyYpgCB/AWDD4elEuYIWyzrv0RMnjZufTzJQnibTX/ThlVZBMISNTU09nH1vrN0qyIi56RAkEA79GdNVhF0StccNVgw1l8m30VArjfOCEqtJZ9ZYBU9C3rWHQiclDv0wHQq0tk344uRoaWT1WHNCTVFFLTYL/OiwJBANCWV55S8CGAM9U3LBGurKbojYC85fkiobQ6oYT84aGlaE3nAkkHAi43vQBGmrVxM5h4epF1sshRnUAz66TYLTUCQQCFE81n/67mbmhimJWUcYDrC5LwKsR7cjQvd97nxzndMeoJ8I/43Z7neXdgxnqYb16QdjjMl0pqjhHLsFZptqYXAkEAnns8Qzz82ldQCpYK07yFzaMvsDrV+L7JYeiSRDrnLCxC3b3BTL8Ydwk+fvEmJunFq/kOF2r31Z+8/MT2K59caQJAGSmwpbL9NxIqv0l5S92xcWQXbuWum6QaDTTlpMPk60m13guJPFYtixzNQnG9WhIwwrImQsjEuAYP/ZCM6xHfuw==
+
+
+	for(i in json){
+			document.getElementsByName(i)[0].value = json[i]
+	}
+document.forms['alipaysubmit'].submit();
+</script>
+
+
+
+
+
+
+
+

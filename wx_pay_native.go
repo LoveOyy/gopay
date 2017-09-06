@@ -96,10 +96,8 @@ func (this *pay_wxpay_Native) Create_Order(shop_name string, shop_body string, m
 	}
 	req.Header.Set("Accept", "application/xml")
 	req.Header.Set("Content-Type", "application/xml;charset=utf-8")
-
 	c := http.Client{}
 	resp, _err := c.Do(req)
-
 	if _err != nil {
 		Log.Write("[微信二维码模式2支付]请求微信支付统一下单接口发送错误,错误原因"+err.Error(), LogErr)
 		return make(map[string]interface{}), errors.New("[微信二维码模式2支付]请求微信支付统一下单接口发送错误,错误原因" + err.Error())
@@ -112,9 +110,7 @@ func (this *pay_wxpay_Native) Create_Order(shop_name string, shop_body string, m
 
 	if xmlResp.Return_code == "SUCCESS" {
 		returnMap := make(map[string]interface{})
-
 		returnMap["code_url"] = xmlResp.Code_url
-
 		Log.Write("[微信二维码模式2支付] 订单"+order_no+"生成完毕", LogInfo)
 		return returnMap, nil
 	}
@@ -223,7 +219,6 @@ func (t *pay_wxpay_Native) Callback(w http.ResponseWriter, r *http.Request) bool
 func (this *pay_wxpay_Native) WxpayVerifySign(needVerifyM map[string]interface{}, sign string) bool {
 	signCalc := this.WxpayCalcSign(needVerifyM, this.config["apikey"].(string))
 	if sign == signCalc {
-
 		return true
 	}
 	return false
